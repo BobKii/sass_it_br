@@ -1,0 +1,90 @@
+@use '../../lib/service.scss' as s;
+
+.header {
+  @extend .section;
+  background-color: s.color('backgroundDark');
+
+
+}
+
+.header__content {
+  @extend .section__content;
+  display: flex;
+  padding: s.space(4) 0;
+  justify-content: space-between; 
+}
+
+.header__block {
+  display: flex;
+  gap: s.space(8);
+  align-items: center;
+
+}
+
+.header__icon {
+  @include s.click;
+}
+
+.header__link {   
+
+  color: s.color('whiteLight');
+  @include s.click;
+
+  font-size: s.size('small');
+}
+
+.product {  
+  @extend .section;
+  padding-top: s.space(20);
+  padding-bottom: s.space(20); 
+
+}
+
+.ptoduct__content {
+  display: grid;
+  gap: s.space(5);
+  text-align: center;
+  align-content: center;
+}
+
+.product_title {
+  font-size: 56px;
+  font-weight: 600;
+  // color: s.color('fontDark');
+}
+
+.product__description {
+  font-size: 28px;
+}
+
+.product_action {
+  display: flex;
+  align-items: center;
+  gap: s.space(5);
+  justify-content: center;
+
+  @include s.click;
+}
+
+.product__link {
+  @include s.linkAction;
+}
+
+.product-big {
+  max-height: 700px;
+  height: 100vh;  
+}
+
+.product--iphone-pro {
+  background-image: url('/img/iphone-pro.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-color: black;
+}
+
+.product--dark {
+  .product_title , .product__description {
+    color: s.color('background');
+  }
+}
