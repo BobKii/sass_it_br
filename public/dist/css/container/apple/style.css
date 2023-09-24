@@ -4,27 +4,27 @@
   padding: 0 16px;
 }
 
-.section__content, .header__content {
+.section__content, .header__content, .ad_content, .ad__title, .ad__link, .footer_content {
   max-width: 1200px;
   width: 100%;
 }
 @media all and (width < 1440px) {
-  .section__content, .header__content {
+  .section__content, .header__content, .ad_content, .ad__title, .ad__link, .footer_content {
     max-width: 1100px;
   }
 }
 @media all and (width < 1200px) {
-  .section__content, .header__content {
+  .section__content, .header__content, .ad_content, .ad__title, .ad__link, .footer_content {
     max-width: 900px;
   }
 }
 @media all and (width < 1000px) {
-  .section__content, .header__content {
+  .section__content, .header__content, .ad_content, .ad__title, .ad__link, .footer_content {
     max-width: 700px;
   }
 }
 @media all and (width < 620px) {
-  .section__content, .header__content {
+  .section__content, .header__content, .ad_content, .ad__title, .ad__link, .footer_content {
     max-width: 500px;
   }
 }
@@ -41,12 +41,48 @@
 
 .header {
   background-color: #454545;
+  flex-direction: column;
 }
 
 .header__content {
   display: flex;
   padding: 16px 0;
   justify-content: space-between;
+}
+
+.ad_block {
+  display: flex;
+  max-width: 1920px;
+  background-color: #FFF;
+  padding: 0 16px;
+  min-height: 45px;
+}
+
+.ad_content {
+  display: flex;
+  padding: 12px 0;
+  justify-content: space-between;
+  background-color: #FFF;
+}
+
+.ad__title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 14px;
+  align-items: center;
+}
+
+.ad__link {
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+}
+
+.ad--link {
+  display: flex;
+  min-width: 120px;
+  justify-content: center;
+  align-items: center;
 }
 
 .header__block {
@@ -239,6 +275,34 @@
 }
 .product-small .product__description {
   font-size: 20px;
+}
+
+.footer_block {
+  display: flex;
+  background-color: #F5F5F7;
+  justify-content: center;
+}
+
+.footer_content {
+  margin: 39px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer_item__block {
+  display: grid;
+  gap: 16px;
+}
+
+.footer_item-group {
+  display: grid;
+  gap: 12px;
+}
+
+.test {
+  max-width: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */
