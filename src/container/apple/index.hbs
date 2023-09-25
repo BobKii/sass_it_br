@@ -21,12 +21,6 @@
         <img src="/svg/search.svg" alt="Search" class="header__icon">
         <img src="/svg/profile.svg" alt="Profile" class="header__icon">
       </div>
-      {{!-- {{#with ad}}
-      <div class="ad">
-        <p class="ad_content"> {{title}} </p>
-
-      </div>
-      {{/with}} --}}
 
     </header>
   </div>
@@ -191,21 +185,18 @@
   <footer class="footer_block">
     <div class="footer_content">
       {{#each footer}}
-
       <div class="footer_item__block">
-        <h3 class="footer_item_title">{{title}}</h3>
+        <h3 class="footer_item__title">{{title}}</h3>
         <div class="footer_item-group">
           {{#each links}}
           <div class="footer__item">
-            <a href="{{url}}" class="product__link"> {{text}} </a>
+            <a href="{{url}}" class="footer__link"> {{text}} </a>
           </div>
           {{/each}}
         </div>
       </div>
       {{/each}}
-
     </div>
-
   </footer>
 
 </div>

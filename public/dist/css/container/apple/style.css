@@ -293,12 +293,32 @@
 
 .footer_item__block {
   display: grid;
+  align-content: flex-start;
   gap: 16px;
+}
+
+.footer_item__title {
+  color: #1D1D1F;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .footer_item-group {
   display: grid;
   gap: 12px;
+}
+
+.footer__link {
+  transition: opacity 0.7s;
+  cursor: pointer;
+  color: #424245;
+  font-size: 12px;
+}
+.footer__link:hover {
+  opacity: 0.7;
+}
+.footer__link:active {
+  opacity: 0.3;
 }
 
 .test {

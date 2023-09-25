@@ -44,9 +44,7 @@
 
 .ad__link {
   @extend .section__content;
-  display: flex;
-  // gap: s.space(8);
-  // align-items: center;
+  display: flex;  
   width: 120px;
   justify-content: space-between; 
 
@@ -56,18 +54,14 @@
   display: flex; 
   min-width: 120px;
   
-
-  
   justify-content: center; 
   align-items: center;
-
 }
 
 .header__block {
   display: flex;
   gap: s.space(8);
   align-items: center;
-
 }
 
 .header__icon {
@@ -199,20 +193,13 @@ $productImage:(
   'small_business'   '/img/small_business.png' #000, 
   'gift'          '/img/gift.png' #FBFBFD, 
   'card'          '/img/card.png' #FBFBFD,   
-  
-   
-    
-  
-  
 );
 
 @each $class, $url, $color in $productImage {
   .product--#{$class} {
     background-image: url(#{$url});
-    background-color: $color;
-  
+    background-color: $color;  
   }
-
 }
 
 .product-small {
@@ -243,13 +230,25 @@ $productImage:(
 
 .footer_item__block {
   display: grid;
-  gap: 16px;
+  align-content: flex-start;
+  gap: s.space(4);
+}
 
+.footer_item__title {
+  color: s.color('fontDark');  
+  font-size: s.size('small');  
+  font-weight: 600;  
 }
 
 .footer_item-group {
   display: grid;
-  gap: 12px;
+  gap:s.space(3);
+}
+
+.footer__link {
+  @include s.click;
+  color: s.color('colorFooterItem');
+  font-size: s.size('small');
 }
 
 
